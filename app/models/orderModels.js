@@ -43,11 +43,13 @@ const schema = new mongoose.Schema(
       default: "PayPal",
     },
     feeShip: { type: String, required: false, default: false },
+    status: { type: String, required: false, default: 0 },
+    stafdId: { type: mongoose.ObjectId, required: false, default: null },
     total: { type: String, default: false },
     isPaid: { type: Boolean, default: false },
     customerId: { type: mongoose.Schema.Types.ObjectId, required: false },
-    isDelivered: { type: Boolean, default: false },
-    // deliveredAt: { type: Date, default: false },
+    // isDelivered: { type: Boolean, default: false },
+    deliveredAt: { type: Date, default: false },
   },
   { timestamps: true }
 );
